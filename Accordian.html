@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Accordian</title>
+</head>
+<style> 
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background: rgb(149, 147, 147);
+    }
+    .accordion{
+        width: 40%;
+        background: #aaaaaa;
+        margin: 50px;
+        padding: 12px 23px;
+        border-radius: 10px;
+    }
+    .accordion-toggle{
+        display: none;
+    }
+    .accordion-tab > label::after{
+        content: "\f078";
+        font-family: fontawesome;
+        position: absolute;
+        top: 13px;
+        right: 20px;
+        transform: rotate(90deg);
+        transition: transform .3s;
+    }
+    .accordion-tab > .accordion-toggle:checked ~ label::after{
+        transform: rotate(0deg);
+    }
+    .accordion-tab > label{
+        color: #fff;
+        background: black;
+        font-weight: bold;
+        line-height: 24px;
+        position: relative;
+        display: block;
+        padding: 12px 20px;
+        border-radius: 0 10px 10px 10px;
+        cursor: pointer;
+        border-top: 1px solid white;
+    }
+    .accordion-tab > .accordion-content{
+        overflow: hidden;
+        max-height: 0;
+        transition: all 0.5s;
+    }
+    .accordion-tab > .accordion-toggle:checked ~ .accordion-content{
+        max-height: 100vh;
+        
+    }
+</style>
+<body>
+    <div class="accordion">
+        <div class="accordion-tab">
+            <input type="checkbox" class="accordion-toggle" name="toggle" id="toggle1">
+            <label for="toggle1">Pure Css Accordion 1</label>
+            <div class="accordion-content">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat quod neque, repudiandae exercitationem earum libero! Neque voluptatibus vero reiciendis minima laborum, quod iusto quibusdam repellendus? Aut earum facere voluptate iusto!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum sunt dolorum atque laudantium quisquam, id ea maxime fugit. Nihil facilis aspernatur molestiae dicta quis quaerat iste, numquam nostrum, quos, perferendis fugiat! Minima optio atque eveniet ipsum officia. Illo, eaque excepturi.</p>
+            </div>
+        </div>
+
+        <div class="accordion-tab">
+            <input type="checkbox" class="accordion-toggle" name="toggle" id="toggle2">
+            <label for="toggle2">Pure Css Accordion 2</label>
+            <div class="accordion-content">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat quod neque, repudiandae exercitationem earum libero! Neque voluptatibus vero reiciendis minima laborum, quod iusto quibusdam repellendus? Aut earum facere voluptate iusto!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum sunt dolorum atque laudantium quisquam, id ea maxime fugit. Nihil facilis aspernatur molestiae dicta quis quaerat iste, numquam nostrum, quos, perferendis fugiat! Minima optio atque eveniet ipsum officia. Illo, eaque excepturi.</p>
+            </div>
+        </div>
+
+        <div class="accordion-tab">
+            <input type="checkbox" class="accordion-toggle" name="toggle" id="toggle3">
+            <label for="toggle3">Pure Css Accordion 3</label>
+            <div class="accordion-content">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat quod neque, repudiandae exercitationem earum libero! Neque voluptatibus vero reiciendis minima laborum, quod iusto quibusdam repellendus? Aut earum facere voluptate iusto!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum sunt dolorum atque laudantium quisquam, id ea maxime fugit. Nihil facilis aspernatur molestiae dicta quis quaerat iste, numquam nostrum, quos, perferendis fugiat! Minima optio atque eveniet ipsum officia. Illo, eaque excepturi.</p>
+            </div>
+        </div>
+
+        <div class="accordion-tab">
+            <input type="checkbox" class="accordion-toggle" name="toggle" id="toggle4">
+            <label for="toggle4">Pure Css Accordion 4</label>
+            <div class="accordion-content">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat quod neque, repudiandae exercitationem earum libero! Neque voluptatibus vero reiciendis minima laborum, quod iusto quibusdam repellendus? Aut earum facere voluptate iusto!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum sunt dolorum atque laudantium quisquam, id ea maxime fugit. Nihil facilis aspernatur molestiae dicta quis quaerat iste, numquam nostrum, quos, perferendis fugiat! Minima optio atque eveniet ipsum officia. Illo, eaque excepturi.</p>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
